@@ -185,7 +185,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "e65eb309",
-        "outputId": "11d093cc-8356-4b58-b493-2aa58e7fee5c"
+        "outputId": "7ddbf2f1-e7bb-49f8-80cf-e5ad9f21d1ce"
       },
       "source": [
         "proyecto_B = {\n",
@@ -203,7 +203,7 @@
         "print('VPN del Proyecto B:', round(vpn_B, 3))"
       ],
       "id": "e65eb309",
-      "execution_count": null,
+      "execution_count": 13,
       "outputs": [
         {
           "output_type": "stream",
@@ -231,16 +231,28 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "b26d4584",
-        "outputId": "4bd79c3b-561e-4725-eeac-47b38cc4f4e6"
+        "outputId": "9a4005ab-3564-433d-abae-16ef7efb24af"
       },
       "source": [
+        "proyecto_B = {\n",
+        "    'nombre': 'Proyecto Tecnológico',\n",
+        "    'inversion': 10000,\n",
+        "    'flujos': [13000, 13500, 14200, 14500],\n",
+        "    'tasa': 0.10\n",
+        "}\n",
+        "\n",
+        "vpn_B = -proyecto_B['inversion']\n",
+        "\n",
+        "for t, flujo in enumerate(proyecto_B['flujos']):\n",
+        "    vpn_B += flujo / (1 + proyecto_B['tasa'])**(t+1)\n",
+        "\n",
         "if vpn_B > 0:\n",
         "    print('El Proyecto B es rentable')\n",
         "else:\n",
         "    print('El Proyecto B no es rentable')"
       ],
       "id": "b26d4584",
-      "execution_count": null,
+      "execution_count": 12,
       "outputs": [
         {
           "output_type": "stream",
@@ -268,7 +280,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "8bd674fd",
-        "outputId": "3b432256-fea2-4137-b069-5fc15b29bf39"
+        "outputId": "35e7d542-13ec-4eaa-eb12-28dcb07bdaff"
       },
       "source": [
         "proyecto_C = {\n",
@@ -286,7 +298,7 @@
         "print('VPN del Proyecto C:', round(vpn_C, 3))"
       ],
       "id": "8bd674fd",
-      "execution_count": null,
+      "execution_count": 14,
       "outputs": [
         {
           "output_type": "stream",
@@ -314,16 +326,28 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "bd1e77c1",
-        "outputId": "ccb54e25-9fac-419c-b90e-4d5f288effcc"
+        "outputId": "8bae3107-142c-4691-8af0-fd09738664c8"
       },
       "source": [
+        "proyecto_C = {\n",
+        "    'nombre': 'Proyecto Logístico',\n",
+        "    'inversion': 7000,\n",
+        "    'flujos': [1800, 2600, 3200, 3800],\n",
+        "    'tasa': 0.10\n",
+        "}\n",
+        "\n",
+        "vpn_C = -proyecto_C['inversion']\n",
+        "\n",
+        "for t, flujo in enumerate(proyecto_C['flujos']):\n",
+        "    vpn_C += flujo / (1 + proyecto_C['tasa'])**(t+1)\n",
+        "\n",
         "if vpn_C > 0:\n",
         "    print('El Proyecto C es rentable')\n",
         "else:\n",
         "    print('El Proyecto C no es rentable')"
       ],
       "id": "bd1e77c1",
-      "execution_count": null,
+      "execution_count": 10,
       "outputs": [
         {
           "output_type": "stream",
@@ -356,13 +380,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 8,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
         "id": "D5SUod3N6STt",
-        "outputId": "843c5d7e-46d2-4797-8281-1461e49c535f"
+        "outputId": "c558ae81-513c-4e2e-bf81-a16b6a1938b6"
       },
       "outputs": [
         {
@@ -400,13 +424,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 7,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
         "id": "-JnBtAQo6STu",
-        "outputId": "ff970a90-03d4-4519-fef4-42004246c9cf"
+        "outputId": "99285c3b-9dc9-4432-ccd7-56844ac14c38"
       },
       "outputs": [
         {
@@ -442,7 +466,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "cdfe2db1",
-        "outputId": "d1d341cb-f31e-47aa-f079-ef456de6b53d"
+        "outputId": "57d4fc2f-dec7-4b55-bffb-f737f6a7a3c8"
       },
       "source": [
         "tasa = 0.05\n",
@@ -458,7 +482,7 @@
         "    tasa += 0.05"
       ],
       "id": "cdfe2db1",
-      "execution_count": null,
+      "execution_count": 6,
       "outputs": [
         {
           "output_type": "stream",
@@ -479,7 +503,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "b33f6924",
-        "outputId": "e3a8bc3d-0acd-45db-93e6-ad559e9d9a8b"
+        "outputId": "6ce691b8-084d-414a-e78c-d049abd54989"
       },
       "source": [
         "tasa = 0.05\n",
@@ -495,7 +519,7 @@
         "    tasa += 0.05"
       ],
       "id": "b33f6924",
-      "execution_count": null,
+      "execution_count": 5,
       "outputs": [
         {
           "output_type": "stream",
@@ -516,16 +540,46 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "new_cell_2",
-        "outputId": "41037d0e-0961-4ebb-dd32-e2ba9a4a7b93"
+        "outputId": "88e47cf5-b336-4a1c-81e4-c46530f74f03"
       },
       "source": [
+        "proyecto_A = {\n",
+        "    'nombre': 'Proyecto Solar',\n",
+        "    'inversion': 8000,\n",
+        "    'flujos': [2500, 3000, 3500, 4000],\n",
+        "    'tasa': 0.10\n",
+        "}\n",
+        "\n",
+        "proyecto_B = {\n",
+        "    'nombre': 'Proyecto Tecnológico',\n",
+        "    'inversion': 10000,\n",
+        "    'flujos': [13000, 13500, 14200, 14500],\n",
+        "    'tasa': 0.10\n",
+        "}\n",
+        "\n",
+        "proyecto_C = {\n",
+        "    'nombre': 'Proyecto Logístico',\n",
+        "    'inversion': 7000,\n",
+        "    'flujos': [1800, 2600, 3200, 3800],\n",
+        "    'tasa': 0.10\n",
+        "}\n",
+        "\n",
+        "proyectos = [proyecto_A, proyecto_B, proyecto_C]\n",
+        "vpn_proyectos = {}\n",
+        "\n",
+        "for proyecto in proyectos:\n",
+        "    vpn = -proyecto['inversion']\n",
+        "    for t, flujo in enumerate(proyecto['flujos']):\n",
+        "        vpn += flujo / (1 + proyecto['tasa'])**(t+1)\n",
+        "    vpn_proyectos[proyecto['nombre']] = vpn\n",
+        "\n",
         "print('--- Resumen de Rentabilidad de Proyectos ---')\n",
-        "for nombre_proyecto, vpn_valor in vpns_proyectos.items():\n",
+        "for nombre_proyecto, vpn_valor in vpn_proyectos.items():\n",
         "    rentabilidad = 'Rentable' if vpn_valor > 0 else 'No rentable'\n",
         "    print(f\"  {nombre_proyecto}: VPN = {round(vpn_valor, 2)} ({rentabilidad})\")"
       ],
       "id": "new_cell_2",
-      "execution_count": null,
+      "execution_count": 4,
       "outputs": [
         {
           "output_type": "stream",
@@ -534,7 +588,7 @@
             "--- Resumen de Rentabilidad de Proyectos ---\n",
             "  Proyecto Solar: VPN = 2113.72 (Rentable)\n",
             "  Proyecto Tecnológico: VPN = 33547.57 (Rentable)\n",
-            "  Proyecto Logístico: VPN = 65182.09 (Rentable)\n"
+            "  Proyecto Logístico: VPN = 1784.78 (Rentable)\n"
           ]
         }
       ]
@@ -551,7 +605,7 @@
         "2. Determine cuál proyecto tiene el **VPN más alto**.\n",
         "3. Justifique la decisión.\n",
         "\n",
-        "Según los cálculos de VPN, el proyecto con mayor rentabilidad es el Proyecto Logístico con un VPN de 65182.09. Esto indica que es el proyecto que genera más valor para la empresa. Tanto el Proyecto Solar como el Proyecto Tecnológico también son rentables, pero en menor medida."
+        "Según los cálculos de VPN, el proyecto con mayor rentabilidad es el **Proyecto Tecnológico** con un VPN de 33547.57. Esto indica que es el proyecto que genera más valor para la empresa y, por lo tanto, la mejor opción de inversión. Tanto el Proyecto Solar como el Proyecto Logístico también son rentables, pero en menor medida."
       ],
       "id": "vDtiojdZ6STu"
     }
